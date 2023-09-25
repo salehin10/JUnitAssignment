@@ -45,7 +45,9 @@ public class MyJunitTesting{
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,500)");
         driver.findElement(By.className("form-textarea")).sendKeys("Lorem Ipsum is simply dummy ## >! ?? of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an deocde?!# $$code. anotehr plot<< >>  printer took a galley of type and scrambled it to make a type specimen book.");
-        driver.findElement(By.className("form-file")).sendKeys("D:\\OneDrive - ReliSource Inc\\RTL Onedrive\\OneDrive - ReliSource Inc\\vi-eur\\Video\\SQA Automation\\SDET Batch 7(Job Holder Batch)\\data_sheet.xlsx");
+        String filePath = System.getProperty("user.dir") +"\\src\\test\\resources\\data_sheet.xlsx";
+        //driver.findElement(By.className("form-file")).sendKeys("D:\\OneDrive - ReliSource Inc\\RTL Onedrive\\OneDrive - ReliSource Inc\\vi-eur\\Video\\SQA Automation\\SDET Batch 7(Job Holder Batch)\\data_sheet.xlsx");
+        driver.findElement(By.className("form-file")).sendKeys(filePath);
         Thread.sleep(10000);
         driver.findElement(By.className("form-checkbox")).click();
 
